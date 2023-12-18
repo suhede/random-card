@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.naipes{
+  width: 100%;
+}
+.container{
+  position: relative;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(19, 90, 19);
+ 
+}
+.front{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  bottom: 5%;
+  width: 15%;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  transition: 2s;
+ 
+ 
+}
+.pa{
+  text-align: start;
+  margin-top: 2%;
+}
+.pa, .pac{
+  margin-left: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.pb {
+  margin-top: 15%;
+  margin-right: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+} 
+.pbc{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+ }
+
+.front img{
+  margin-top: 20%;
+}
+.img{
+  width: 100%;
+  border-radius: 10px;
+}
+.back{
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  bottom: 5%;
+  width: 15%;
+  height: 350px;
+  border-radius: 6px;
+  backface-visibility: hidden;
+  transition: 2s;
+}
+
+.front, .pb, .pbc{
+  transform: rotate(180deg);
+}
+
+.container .front{
+  transform: rotateY(0deg);
+}
+.container .back{
+  transform: rotateY(180deg);
+}
+
+.container:hover .front{
+  transform: rotateY(180deg);
+}
+.container:hover .back{
+  transform: rotateY(360deg);
+}
+
+.button-card{
+  position: absolute;
+  top: 70%;
+  left: 28%;
+ 
+}
+.button{
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(135, 198, 135);
+  color: black;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+  .container{
+    color: goldenrod;
+  }
+  .front{
+    display: block;
+    margin: 0 auto;
+  }
+  .back{
+    margin: 0 auto;
+  }
+  .button-card{
+    color: wheat;
+    width: 50px;
+  }
+  
+}
+@media  screen and (min-768px) {
+  .container{
+    color: goldenrod;
+  }
+  .front{
+    display: block;
+    margin: 0 auto;
+  }
+  .back{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .button-card{
+    color: wheat;
+    width: 50px;
+  }
+}
+@media screen and (min-992px) {
+  .front, .back{
+    margin: auto;
+    
+  }
+  .button-card{
+    color: wheat;
+    width: 50px;
+  }
+} 
